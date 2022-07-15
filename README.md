@@ -24,24 +24,16 @@ Now that we have the above mentioned dataset, we can dig a little deeper. Since 
 
 In order to view this data the merged data frame is read in. We create another dataframe use the `groupby()` function for each date. Additoinally, the use of the `sum` function was implemented on the fares where the indices are the city `type` and `date`. The output of that raw data looked like this. 
 
-![Screen Shot 2022-07-15 at 01 46 33](https://user-images.githubusercontent.com/105962575/179167178-2a2b09a1-0622-48bc-bf43-bbde9994b3c1.png)
+In order to create the plot, the resample dataframe function `df.plot` was used to incorporate the `y axis` and `x axis for `Fare` in USD and Total Fare by City Type. 
 
-After cleaning up the datetime frames from above, a pivot table is created that breaks down `fare`, `date` and  `type` for the following dates: `'2019-01-01':'2019-04-29'`. A new dataframe is built of off the dataframe to using the `resample` function by week `W`, in order to get the fares for each week by date. 
 
 ![Screen Shot 2022-07-15 at 02 00 59](https://user-images.githubusercontent.com/105962575/179169625-d1de89c8-0d70-44fb-a600-1f83753f050a.png)
 
-In order to create the plot, the resample dataframe function `df.plot` was used to incorporate the `y axis` and `x axis for `Fare` in USD and `Total Fare by City Type`. 
-
-![fares_by_city_type](https://github.com/hastyjr/PyBer_Analysis/blob/main/analysis/PyBer_fare_summary.png)
+After cleaning up the datetime frames from above, a pivot table is created that breaks down `fare`, `date` and  `type` for the following dates: `'2019-01-01':'2019-04-29'`. A new dataframe is built of off the dataframe to using the `resample` function by week `W`, in order to get the fares for each week by date. 
 
 ## Last but not least...
-
-
-![Screen Shot 2022-07-15 at 02 02 13](https://user-images.githubusercontent.com/105962575/179169847-af1a2826-f06b-4403-9ad1-e6ca4c929070.png)
-
-There is a description of the differences in ride-sharing data among the different city types. Ride-sharing data include the total rides, total drivers, total fares, average fare per ride and driver, and total fare by city type
+![fares_by_city_type](https://github.com/hastyjr/PyBer_Analysis/blob/main/analysis/PyBer_fare_summary.png)
 
 # Summary
-There is a statement summarizing three business recommendations to the CEO for addressing any disparities among the city types.
-
+In summary, this data is helping Pyber fully understand the seasonalities of the data. There is different datasets they can pull from to make informaed decisions on now. This analysis has given them insights on even the smallest metrics like total rides, drivers count, fares count, driver average fare and drivers average fare to the aggregated and complex data like total fare by city type or fares by city type. Pyber can take this information and decide how they fully digest the data understand and identify further strategic effors behind this information. 
 
